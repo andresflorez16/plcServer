@@ -8,11 +8,10 @@ def verifyIP():
         inputIP.config(state="disabled")
         btn.place_forget()
         lbl2.place(x=0, y=100)
+        inputTagName.place(x=180, y=100)
     else:
         checkLblIP["text"] = 'Type a correct IP direction'
         checkLblIP.config(foreground='red')
-
-
 
 ventana = tkinter.Tk()
 
@@ -32,9 +31,11 @@ checkLblIP.place(x=300, y=70)
 lbl2 = Label(ventana,text="Please type the variable Tag:", font="Monospace 10")
 lbl2.place_forget()
 
-
 inputIP = Entry(ventana, highlightthickness=2, highlightcolor="#000", highlightbackground="#000", font="Monospace 10")
 inputIP.place(x=150, y=70)
+
+inputTagName = Entry(ventana, highlightthickness=2, highlightcolor="#000", highlightbackground="#000", font="Monospace 10")
+inputTagName.place_forget()
 
 btn = Button(ventana, text="Presionar", highlightthickness=2, highlightcolor="#000", highlightbackground="#000", font="Monospace 10", command = verifyIP)
 btn["fg"]="#000"
